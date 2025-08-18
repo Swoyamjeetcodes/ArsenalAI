@@ -1,0 +1,22 @@
+{
+  "name": "ai-tools-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "npm install"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@vendia/serverless-express": "^4.12.6",
+    "axios": "^1.11.0",
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "path": "^0.12.7"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}
