@@ -1,6 +1,6 @@
 const API_CONFIG = {
   BASE_URL: process.env.NODE_ENV === 'production' 
-    ? 'https://ai-tools-backend-m520.onrender.com'
+    ? 'https://arsenalai.onrender.com'
     : 'http://localhost:3000'
 };
 
