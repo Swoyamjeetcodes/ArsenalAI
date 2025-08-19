@@ -20,9 +20,9 @@ function Navbar({ currentView, onMenuClick }) {
   };
 
   return (
-    <div className="w-full bg-gray-800 p-4 flex justify-between items-center shadow-md">
+    <div className="w-full bg-black p-4 flex justify-between items-center shadow-md border-b border-white">
       <div className="flex items-center gap-4">
-        {/* Mobile menu button */}
+        {/* Hamburger menu button for mobile */}
         <button 
           className="lg:hidden text-white hover:text-gray-300 transition-colors"
           onClick={onMenuClick}
@@ -30,7 +30,7 @@ function Navbar({ currentView, onMenuClick }) {
           <FaBars size={20} />
         </button>
         
-        {/* Desktop titles */}
+        {/* Titles */}
         <div className="flex items-center gap-6">
           <h1 className="text-xl sm:text-2xl font-bold text-white">AI Tools</h1>
           <div className="hidden sm:block w-px h-6 bg-gray-600"></div>

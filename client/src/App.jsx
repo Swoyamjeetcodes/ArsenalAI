@@ -72,7 +72,7 @@ function App() {
           currentView={activeView} 
           onMenuClick={() => setSidebarOpen(!sidebarOpen)}
         />
-        <main className="flex-grow flex items-center justify-center p-4 sm:p-6 lg:p-8 overflow-auto">
+        <main className="flex-grow flex items-center justify-center p-4 sm:p-6 lg:p-8 overflow-auto bg-black">
           <div className="w-full max-w-4xl">
             {activeView === 'summarizer' && <Summarizer addToHistory={addToHistory} viewingHistoryItem={viewingHistoryItem} />}
             {activeView === 'captioner' && <ImageCaptioner addToHistory={addToHistory} viewingHistoryItem={viewingHistoryItem} />}

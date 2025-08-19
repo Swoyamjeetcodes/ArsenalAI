@@ -63,13 +63,13 @@ function ImageCaptioner({ addToHistory, viewingHistoryItem }) {
   };
 
   return (
-    <div className="w-full max-w-4xl bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg">
-      <h2 className="text-xl sm:text-2xl mb-4 text-center">Image Captioner</h2>
+    <div className="w-full max-w-4xl bg-black p-4 sm:p-6 rounded-lg shadow-lg">
+      <h2 className="text-xl sm:text-2xl mb-4 text-center text-white">Image Captioner</h2>
       <input
         type="file"
         accept="image/*"
+        className="block w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#1e90ff] file:text-white hover:file:bg-[#4682b4]"
         onChange={handleFileChange}
-        className="block w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
       />
       {preview && (
         <div className="mt-4 text-center">
@@ -83,14 +83,14 @@ function ImageCaptioner({ addToHistory, viewingHistoryItem }) {
       <button
         onClick={handleCaption}
         disabled={loading || !file}
-        className="mt-4 w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 sm:py-3 px-4 rounded-md transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+        className="mt-4 w-full bg-[#1e90ff] hover:bg-[#4682b4] text-white font-bold py-2 sm:py-3 px-4 rounded-md transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
       >
         {loading ? 'Generating...' : 'Generate Caption'}
       </button>
       {caption && (
-        <div className="mt-6 p-4 bg-gray-700 rounded-md">
-          <h3 className="text-lg sm:text-xl mb-2">Caption:</h3>
-          <p className="text-gray-300 text-sm sm:text-base leading-relaxed">{caption}</p>
+        <div className="mt-6 p-4 bg-[#111111] rounded-md border border-[#333333]">
+          <h3 className="text-lg sm:text-xl mb-2 text-white">Caption:</h3>
+          <p className="text-[#bbbbbb] text-sm sm:text-base leading-relaxed">{caption}</p>
         </div>
       )}
     </div>

@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        amoledBlack: '#000000', // Pure black for AMOLED
+      },
+    },
   },
   plugins: [],
 }

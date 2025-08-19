@@ -2,3 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: theme('colors.amoledBlack'); /* Use Tailwind's custom color */
+  color: #ffffff; /* White text for contrast */
+}
+
+a {
+  color: #1e90ff; /* Bright blue for links */
+}
+
+button {
+  background-color: #333333; /* Dark gray for buttons */
+  color: #ffffff; /* White text for buttons */
+}
+
+input, textarea {
+  background-color: #222222; /* Slightly lighter black for inputs */
+  color: #ffffff; /* White text for inputs */
+  border: 1px solid #444444; /* Subtle border for inputs */
+}
+
+.card, .read-the-docs {
+  background-color: #111111; /* Darker black for cards */
+  color: #ffffff; /* White text */
+}
+

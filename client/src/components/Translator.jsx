@@ -42,23 +42,23 @@ function Translator({ addToHistory, viewingHistoryItem }) {
   };
 
   return (
-    <div className="w-full max-w-6xl bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg">
-      <h2 className="text-xl sm:text-2xl mb-4 text-center">Language Translator</h2>
+    <div className="w-full max-w-6xl bg-black p-4 sm:p-6 rounded-lg shadow-lg">
+      <h2 className="text-xl sm:text-2xl mb-4 text-center text-white">Language Translator</h2>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
         <div>
-          <h3 className="text-lg sm:text-xl mb-2">Your Text:</h3>
+          <h3 className="text-lg sm:text-xl mb-2 text-white">Your Text:</h3>
           <textarea
-            className="w-full h-48 sm:h-64 p-3 bg-gray-700 rounded-md border border-gray-600 text-sm sm:text-base resize-none"
+            className="w-full h-48 sm:h-64 p-3 bg-[#222222] rounded-md border border-[#444444] text-sm sm:text-base text-white resize-none"
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
             placeholder="Enter text to translate..."
           />
         </div>
         <div>
-          <h3 className="text-lg sm:text-xl mb-2">Translation:</h3>
+          <h3 className="text-lg sm:text-xl mb-2 text-white">Translation:</h3>
           <textarea
-            className="w-full h-48 sm:h-64 p-3 bg-gray-700 rounded-md border border-gray-600 text-sm sm:text-base resize-none"
+            className="w-full h-48 sm:h-64 p-3 bg-[#111111] rounded-md border border-[#333333] text-sm sm:text-base text-[#bbbbbb] resize-none"
             value={outputText}
             readOnly
             placeholder="Translation will appear here..."
@@ -79,7 +79,7 @@ function Translator({ addToHistory, viewingHistoryItem }) {
           <option>Hindi</option>
         </select>
         <button
-          className="w-full sm:flex-1 bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 sm:py-3 px-4 rounded-md transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+          className="w-full sm:flex-1 bg-[#1e90ff] hover:bg-[#4682b4] text-white font-bold py-2 sm:py-3 px-4 rounded-md transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
           onClick={handleTranslate}
           disabled={loading || !inputText.trim()}
         >

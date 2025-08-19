@@ -137,17 +137,22 @@ app.post('/translate', async (req, res) => {
 app.post('/explain-code', async (req, res) => {
   try {
     const { code } = req.body;
+
+    if (!code || code.trim() === '') {
+      return res.status(400).json({ error: 'Code input is required.' });
+    }
+
     const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
-    const prompt = `Explain this code in a simple way, line by line: \n\n\`\`\`\n${code}\n\`\`\``;
-    
+    const prompt = `Explain this code in a simple way, line by line:\n\n${code}`;
+
     const result = await model.generateContent(prompt);
     const response = await result.response;
     const explanation = response.text();
 
     res.json({ explanation });
   } catch (error) {
-    console.error('Code explanation error:', error);
-    res.status(500).json({ error: 'Failed to explain code.' });
+    console.error('Code explanation error:', error.message || error);
+    res.status(500).json({ error: 'Failed to explain code. Please check the backend logs for more details.' });
   }
 });
 

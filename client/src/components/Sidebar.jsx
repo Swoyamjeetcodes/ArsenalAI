@@ -26,7 +26,7 @@ function Sidebar({ activeView, setActiveView, history, onHistoryClick, isOpen, o
   return (
     <>
       {/* Desktop Sidebar */}
-      <div className="hidden lg:flex w-64 bg-gray-800 text-white p-4 flex-col border-r border-gray-700">
+      <div className="hidden lg:flex w-64 bg-black text-white p-4 flex-col border-r border-gray-700">
         <nav className="flex flex-col gap-2">
           <button className={getLinkClassName('summarizer')} onClick={() => setActiveView('summarizer')}> 
             <FaFileAlt /> Text Summarizer 
@@ -72,7 +72,7 @@ function Sidebar({ activeView, setActiveView, history, onHistoryClick, isOpen, o
       </div>
 
       {/* Mobile Sidebar */}
-      <div className={`lg:hidden fixed inset-y-0 left-0 z-50 w-64 bg-gray-800 text-white transform transition-transform duration-300 ease-in-out ${
+      <div className={`lg:hidden fixed inset-y-0 left-0 z-50 w-64 bg-black text-white transform transition-transform duration-300 ease-in-out ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       }`}>
         <div className="p-4 flex flex-col h-full">
