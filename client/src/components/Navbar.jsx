@@ -32,7 +32,7 @@ function Navbar({ currentView, onMenuClick }) {
         
         {/* Titles */}
         <div className="flex items-center gap-6">
-          <h1 className="text-xl sm:text-2xl font-bold text-white">AI Tools</h1>
+          <h1 className="text-xl sm:text-2xl font-bold text-white">ARSENAL AI</h1>
           <div className="hidden sm:block w-px h-6 bg-gray-600"></div>
           <h2 className="hidden sm:block text-lg sm:text-xl font-semibold text-gray-300">{getTitle()}</h2>
         </div>
